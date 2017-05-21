@@ -65,6 +65,7 @@ Article.fetchAll = function() {
         console.log('this should be an array of my articles', rawData);
         Article.loadAll(rawData)
         localStorage.rawData = JSON.stringify(rawData)
+        articleView.initIndexPage()
       },
       //Fail CALLBACK (Do we need this?)
       function(err) {
